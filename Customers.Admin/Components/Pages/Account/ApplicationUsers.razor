@@ -1,0 +1,132 @@
+@page "/user-mangement"
+@using Customers.Data.Models
+@rendermode @(new InteractiveServerRenderMode(false))
+@inject TooltipService TooltipService
+@attribute [StreamRendering]
+@attribute [Authorize]
+@using Customers.Infrastructure.Utils
+
+<style>
+    .loading-spinner {
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .disabled-row td {
+        opacity: 0.7;
+    }
+
+    i {
+        cursor: pointer;
+    }
+
+    .rz-alert .rz-alert-icon {
+        font-size: xx-large;
+    }
+
+    .rz-button-sm {
+        display: none;
+    }
+</style>
+
+<PageTitle>User Management</PageTitle>
+
+<div class="rz-card rz-variant-filled rz-p-0 rz-material-3-demo-card" id="Hsg49w66yE" _bl_183="">
+    <div class="rz-tabview rz-tabview-top example-tabs" id="UomLO2i3TU" tabindex="0" _bl_213="">
+        <div class="rz-tabview-panels">
+            <div class="rz-tabview-panel" role="tabpanel" id="UomLO2i3TU-tabpanel-0" aria-hidden="false" aria-labelledby="UomLO2i3TU-tabpanel-0-label">
+                <RadzenStack Style="@(IsLoading ? "opacity:0.5" : "")">
+                    <RadzenRow AlignItems="AlignItems.Center">
+                        <RadzenColumn SizeSM="6">
+                            <RadzenText Text="User Management" TextStyle="TextStyle.H5" TagName="TagName.H1" style="margin: 0" />
+                        </RadzenColumn>
+                        <RadzenColumn SizeSM="6">
+                            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.End" Gap="0.5rem">
+                                <RadzenButton Icon="add_circle_outline" Text="Add" Disabled="(ApplicationOwners== null)" Click="@AddClick" Variant="Variant.Flat" />
+                            </RadzenStack>
+                        </RadzenColumn>
+                    </RadzenRow>
+                    <RadzenRow class="position-relative">
+                        @if (IsLoading)
+                        {
+                            <div class="position-absolute loading-spinner">
+                                <RadzenProgressBarCircular ProgressBarStyle="ProgressBarStyle.Primary" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                            </div>
+                        }
+                        <RadzenColumn SizeMD="12">
+                            <RadzenAlert Size="AlertSize.Large" Shade="Shade.Light" AlertStyle="AlertStyle.Danger" Variant="Variant.Flat" Title="Cannot delete user" Visible="@errorVisible">@error</RadzenAlert>
+                            <RadzenDataGrid FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" @ref="grid0" AllowFiltering="true" AllowPaging="true" ShowPagingSummary="true" PageSizeOptions=@(new int[]{5, 10, 20, 30}) AllowSorting="true"
+                                            TItem="ApplicationUserViewModel" RowRender="@OnRowRender" Data="@users" RowSelect="@RowSelect">
+                                <Columns>
+                                    <RadzenDataGridColumn TItem="ApplicationUserViewModel" Filterable="false" Sortable="false" TextAlign="TextAlign.Start" Width="130px" Title="Actions">
+                                        <Template Context="user">
+                                            <RadzenSwitch Visible="@(!IsDisabled(user.Id))" Disabled="@IsDisabled(user.Id)" @bind-Value=@(user.IsActive)
+                                                          MouseEnter="@(e=>ShowActiveTooltip(e, (user.IsActive? true : false)))" MouseLeave="CloseTooltip"
+                                                          Change="@(() => ChangeActiveStatus(user.Id))" stopPropagation="true" />
+                                            @if (ApplicationOwners != null && ApplicationOwners.Count < 2)
+                                            {
+                                                <RadzenText class="button p" Visible="@(!IsDisabled(user.Id))" TextStyle="TextStyle.Caption"
+                                                            @onclick="@(() => MeakeUSerSecondary(user))" MouseLeave="CloseTooltip"
+                                                            MouseEnter="@ShowSecondaryTooltip">
+                                                    <i class="rzi mdi mdi-shield-account  mdi-24px " style="color:var(--rz-primary) "></i>
+                                                </RadzenText>
+                                            }
+                                            <RadzenText class="button p" Visible="@(!IsDisabled(user.Id))" TextStyle="TextStyle.Caption" Style="@(IsDisabled(user.Id) ? "opacity:0.7" :"")"
+                                                        @onclick="@(() => DeleteClick(user))" MouseLeave="CloseTooltip"
+                                                        MouseEnter="@ShowDeleteTooltip">
+                                                <i class="rzi mdi mdi-archive-outline mdi-24px text-danger"></i>
+                                            </RadzenText>
+                                        </Template>
+                                    </RadzenDataGridColumn>
+                                    <RadzenDataGridColumn TItem="ApplicationUserViewModel" Width="170px" Property="FirstName" Title="First Name" />
+                                    <RadzenDataGridColumn TItem="ApplicationUserViewModel" Width="170px" Property="LastName" Title="Last Name" />
+                                    <RadzenDataGridColumn TItem="ApplicationUserViewModel" Width="280px" Property="UserName" Title="Email" />
+                                    <RadzenDataGridColumn TItem="ApplicationUserViewModel" Title="Role" Property="UserName" Width="200px">
+                                        <Template Context="cuser">
+                                            @{
+                                                var currentUser = ApplicationOwners.FirstOrDefault(x => cuser.Id == x.Id);
+                                                <span>@(currentUser == null ? "Account User" : (currentUser.IsOwner ? "Secondary Owner" : "Primary Owner"))</span>
+                                            }
+                                        </Template>
+                                    </RadzenDataGridColumn>
+                                    <RadzenDataGridColumn TItem="ApplicationUserViewModel" Width="150px" Property="IsActive" Title="Status">
+                                        <Template Context="cuser">
+                                            @(cuser.IsActive? "Active" : "Inactive")
+                                        </Template>
+                                    </RadzenDataGridColumn>
+                                    <RadzenDataGridColumn TItem="ApplicationUserViewModel" Property="CreatedBy" Width="180px" Title="Created By" />
+                                    <RadzenDataGridColumn TItem="ApplicationUserViewModel" Property="CreatedOn" Width="230px" Title="Created On">
+                                        <Template Context="cuser">
+                                            @*<RadzenText TextStyle="TextStyle.Body2" class="text-lightgrey">@cuser.CreatedOn.ToString("MM-dd-yyyy hh:mm:ss tt")  </RadzenText>*@
+                                            <RadzenText TextStyle="TextStyle.Body2" class="text-lightgrey"> @DateUtils.FormatDateTime(cuser.CreatedOn)  </RadzenText>
+                                        </Template>
+                                    </RadzenDataGridColumn>
+                                </Columns>
+                            </RadzenDataGrid>
+                        </RadzenColumn>
+                    </RadzenRow>
+                </RadzenStack>
+            </div>
+        </div>
+    </div>
+</div>
+@code{
+    private ElementReference elementReference;
+    bool value { get; set; }
+    TooltipOptions options = new TooltipOptions() { Style = "background: #fff; color: var(--rz-text-color)", Duration = null };
+
+    void CloseTooltip()
+    {
+        TooltipService.Close();
+    }
+
+    void ShowDeleteTooltip(ElementReference elementReference) => TooltipService.Open(elementReference, ds =>@<div>Delete</div>, options);
+
+void ShowActiveTooltip(ElementReference elementReference, bool isActive) => TooltipService.Open(elementReference, ds =>@<div>Set as @(isActive ? "Inactive" : "Active")</div>, options);
+void ShowDisableTooltip(ElementReference elementReference) => TooltipService.Open(elementReference, ds =>@<div>Can not edit your self or Account owner</div>, options);
+void ShowSecondaryTooltip(ElementReference elementReference) => TooltipService.Open(elementReference, ds =>@<div>Make User Secondary Owner</div>, options);
+
+
+}

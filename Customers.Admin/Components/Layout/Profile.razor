@@ -1,0 +1,154 @@
+﻿@rendermode @(new InteractiveServerRenderMode(false))
+@attribute [StreamRendering]
+@inject Microsoft.AspNetCore.Identity.UserManager<Customers.Data.Models.ApplicationUser> UserManager
+@using System.Security.Claims
+@inject IJSRuntime JSRuntime
+@implements IDisposable
+
+<style>
+    .rz-navigation-item-icon-children {
+        background-color: var(--rz-primary);
+    }
+
+    .rz-navigation-menu {
+        right: 10px !important;
+    }
+
+    .rz-switch.profile-switch.rz-switch-checked .rz-switch-circle {
+        background-color: #fff;
+    }
+
+        .rz-switch.profile-switch.rz-switch-checked .rz-switch-circle::before {
+            background-color: #9ca0a0;
+        }
+</style>
+
+
+<div class="d-flex">
+    <CascadingAuthenticationState>
+        <AuthorizeView>
+            <Authorized>
+                @if (context.User.IsInRole("Account Owner"))
+                {
+                    <!--<div class="d-flex align-items-center">-->
+                        @*<span class="text-white me-3">
+                                <RadzenButton ButtonStyle="ButtonStyle.Light" Shade="Shade.Lighter" Click="SwitchRole">
+                                    Switch to @(CurrentRole == "Account Owner" ? "User" : "Owner")
+                                </RadzenButton>
+                            </span>*@
+                        <!--<span class="text-white me-4">
+                            Switch to @(CurrentRole == "Account Owner" ? "User" : "Owner")
+                            <RadzenSwitch Disabled="ChangingRole" class="profile-switch" @bind-Value=@value Change="OnChange" InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "Switch value" }})" />
+                        </span>
+                    </div>-->
+                }
+                <div @onclick="ToggleProfileMenu" tabindex="-1" href="profile" style="overflow:visible;" class="rz-navigation-item-link">
+                    <i class="bi bi-person-circle fs-3 text-white me-2"></i>
+
+                    <div class="d-flex flex-column">
+                        <span class="text-white">
+                            @context.User?.FindFirst("UserFullName")?.Value
+                            @*.FindFirst(ClaimTypes.GivenName)?.Value @context.User.FindFirst(ClaimTypes.Surname)?.Value*@
+                        </span>
+                        <small class="text-white" style="font-size:12px;">
+                            @CurrentRole
+                        </small>
+                    </div>
+
+                </div>
+            </Authorized>
+        </AuthorizeView>
+    </CascadingAuthenticationState>
+    <RadzenProfileMenu @ref="profileMenuRef" class="me-2 profile" Style="background-color: var( --rz-primary) ">
+        <ChildContent>
+            <RadzenText class="m-0">
+            </RadzenText>
+            <RadzenProfileMenuItem Path="change-password" Icon="key" Text="Change Password" Style="font-size: small; color: grey !important;" />
+            @*@if (CurrentRole == "Account Owner")
+            {
+                <RadzenProfileMenuItem Path="license_details" Icon="description" Text="License Details" Style="font-size: small; color: grey !important;" />
+            }*@
+            @*<RadzenProfileMenuItem Path="add-application-user" Text="Add User" Style="font-size: small; color: grey !important;" />*@
+            <RadzenText class="m-0 mb-1" Style="display: flex; justify-content: center; height: 37px; font-size: small;">
+                <RadzenButton Text="Logout" Icon="input" ButtonStyle="ButtonStyle.Danger" Click="@logout" class="width" />
+            </RadzenText>
+        </ChildContent>
+    </RadzenProfileMenu>
+</div>
+
+@code {
+    [Inject]
+    protected SecurityService Security { get; set; }
+    private RadzenProfileMenu profileMenuRef;
+    private DotNetObjectReference<Profile> dotNetHelper;
+    private IDisposable clickOutsideHandler;
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+    [Inject]
+    public UserManager<ApplicationUser> userManager { get; set; }
+    [Inject]
+    public IActivityLogService ActivityLogService { get; set; }
+    bool value { get; set; }
+    private bool IsProfileMenuOpen { get; set; } = false;
+    string CurrentRole = string.Empty;
+    bool ChangingRole { get; set; } = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Security.Refresh();
+        var UserClaims = await Security.GetUserClaims();
+        CurrentRole = UserClaims.CurrentRole;
+
+       // value = CurrentRole == "Account Owner";
+    }
+
+    async Task OnChange()
+    {
+        ChangingRole = true;
+        var authState = await Security.GetAuthenticationStateAsync();
+        var user = await userManager.FindByNameAsync(authState.Name);
+
+        Security.SwitchRole(CurrentRole, authState.Name, NavManager.Uri.Replace(NavManager.BaseUri, ""));
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            dotNetHelper = DotNetObjectReference.Create(this);
+            clickOutsideHandler = await JSRuntime.InvokeAsync<IDisposable>(
+                "profileMenuHandler.initialize", dotNetHelper);
+        }
+    }
+
+    private async Task ToggleProfileMenu(MouseEventArgs args)
+    {
+        IsProfileMenuOpen = !IsProfileMenuOpen;
+        await profileMenuRef.Toggle(args);
+        StateHasChanged();
+    }
+
+    [JSInvokable]
+    public async Task CloseProfileMenu()
+    {
+        if (IsProfileMenuOpen)
+        {
+            await profileMenuRef.Toggle(new MouseEventArgs());
+            IsProfileMenuOpen = false;
+            StateHasChanged();
+        }
+    }
+
+    protected async Task logout()
+    {
+        await ActivityLogService.AddActivityLog("User logged out");
+        Security.Logout();
+    }
+
+    public void Dispose()
+    {
+        JSRuntime.InvokeVoidAsync("profileMenuHandler.dispose");
+        clickOutsideHandler?.Dispose();
+        dotNetHelper?.Dispose();
+    }
+}

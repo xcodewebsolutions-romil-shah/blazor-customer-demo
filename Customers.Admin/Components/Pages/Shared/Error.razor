@@ -1,0 +1,35 @@
+﻿<RadzenRow>
+    <RadzenColumn SizeMD="12" Style="text-align:center;">
+        <RadzenIcon Icon="dangerous" IconColor="@Colors.Danger" Style="font-size:80px;" />
+        <RadzenText TextStyle="TextStyle.Body1" Style="font-size:18px;font-weight:500;">An error occurred while processing</RadzenText>
+    </RadzenColumn>
+</RadzenRow>
+<RadzenRow>
+    <RadzenColumn SizeMD="12">
+        <RadzenText TextStyle="TextStyle.Body2" class="m-0 text-lightgrey">
+            Message = @ErrMessage
+        </RadzenText>
+        <RadzenText TextStyle="TextStyle.Body2" class="m-0 text-lightgrey" Style="overflow-wrap:anywhere;">
+            StackTrace = @StackTrace
+        </RadzenText>
+    </RadzenColumn>
+</RadzenRow>
+<RadzenRow>
+    <RadzenColumn SizeMD="12" class="mt-3" Style="text-align:center;">
+        <RadzenButton ButtonStyle="ButtonStyle.Primary" Click="Close">Close</RadzenButton>
+    </RadzenColumn>
+</RadzenRow>
+
+@code {
+    [Parameter]
+    public string ErrMessage { get; set; }
+    [Parameter]
+    public string StackTrace { get; set; }
+    [Inject]
+    public DialogService DialogService { get; set; }
+
+    void Close()
+    {
+        DialogService.Close();
+    }
+}

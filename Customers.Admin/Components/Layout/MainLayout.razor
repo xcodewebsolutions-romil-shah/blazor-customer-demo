@@ -1,0 +1,141 @@
+@inherits LayoutComponentBase
+@inject NavigationManager NavManager
+@attribute [Authorize]
+
+<RadzenComponents @rendermode="new InteractiveServerRenderMode(false)" />
+<style>
+    /* :root {
+        --rz-primary: #33A06F !important;
+    }*/
+
+    .user-icon {
+        background: #fff;
+        color: #4340d2;
+        border-radius: 50%;
+    }
+
+    .rz-sidebar-collapsed {
+        width: 65px !important;
+        opacity: 1;
+    }
+
+    .rz-sidebar.rz-sidebar-collapsed > .rz-stack {
+        visibility: visible !important
+    }
+
+    .width {
+        width: 90%;
+        font-size: smaller;
+    }
+
+    .rz-layout .rz-sidebar {
+        width: 240px;
+    }
+
+    .rz-sidebar {
+        overflow: hidden
+    }
+
+    .rz-panel-menu {
+        color: grey;
+    }
+
+    .navigation-item-text {
+        color: grey;
+        letter-spacing: 1px !important;
+        margin-left: 15px;
+    }
+
+    .navigation-item-icon {
+        color: grey !important;
+        font-size: 24px;
+    }
+
+    .rz-navigation-item-wrapper-active {
+        background-color: #E8F8F1 !important;
+    }
+</style>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 1005 !important">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="mdi mdi-check-circle text-success me-2"></i>
+            <div class="me-auto fw-medium">Success</div>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="Data">
+
+        </div>
+    </div>
+</div>
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 1005 !important">
+    <div id="Toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="mdi mdi-check-circle text-success me-2"></i>
+            <div class="me-auto fw-medium">Success</div>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="DataNew">
+
+        </div>
+    </div>
+</div>
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 1005 !important">
+    <div id="LicenseToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class=" mdi mdi-alert-circle text-danger me-2"></i>
+            <div class="me-auto fw-medium">Failed</div>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="DataSoli"></div>
+    </div>
+</div>
+<RadzenLayout style="grid-template-areas: 'rz-sidebar rz-header' 'rz-sidebar rz-body';">
+    <RadzenHeader>
+        <RadzenRow JustifyContent="JustifyContent.Start" AlignItems="AlignItems.Center" Gap="0">
+            <RadzenColumn Size="12" class="d-flex justify-content-between">
+                <button aria-label="Toggle" tabindex="0" onclick="toggleSidebar()" class="rz-sidebar-toggle">
+                    <i class="rzi rz-display-flex rz-align-items-center">menu</i>
+                </button>
+                <Profile />
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenHeader>
+    <RadzenBody id="body-content">
+        <RadzenRow class="rz-mx-auto rz-px-4 rz-pt-2 rz-pt-md-4 rz-pt-lg-6 rz-pt-xl-12 rz-pb-2 rz-pb-lg-12"
+                   Style="max-width: 1440px;">
+            <RadzenColumn Size="12">
+                @Body
+            </RadzenColumn>
+        </RadzenRow>
+    </RadzenBody>
+    <RadzenSidebar Responsive="false" id="sidebar" style="z-index: 2 ; ">
+        <RadzenStack AlignItems="Radzen.AlignItems.Center" class="rz-py-4 rz-py-lg-6 h-100 px-0"
+                     Style="padding: var(--rz-panel-menu-item-padding); border-bottom: var(--rz-panel-menu-item-border);">
+
+            <RadzenText Text="Customers" TextStyle="Radzen.Blazor.TextStyle.Subtitle1" class="rz-mb-0"
+                        style="color: var(--rz-sidebar-color);" Visible="sidebarExpanded" />
+
+            <RadzenPanelMenu class="w-100">
+                  
+                        <RadzenPanelMenuItem Text="Monitoring Logs" Path="monitoring-logs" class="@GetActive("monitoring-logs")">
+                            <Template>
+                                <span class="mdi mdi-account-box navigation-item-icon mdi-24px"></span>
+                                <span class="navigation-item-text">MONITORING LOGS </span>
+                            </Template>
+                        </RadzenPanelMenuItem>
+
+                @*<RadzenPanelMenuItem Text=@menuItem Path="monitoring-logs" class="@GetActive("monitoring-logs")" Icon="account_box" />*@
+            </RadzenPanelMenu>
+        </RadzenStack>
+    </RadzenSidebar>
+</RadzenLayout>
+
+@code{
+
+    string GetActive(string path)
+    {
+        return (NavManager.Uri.Contains(path) ? "rz-navigation-item-wrapper-active" : "");
+    }
+
+}

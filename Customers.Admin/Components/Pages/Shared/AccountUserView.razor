@@ -1,0 +1,18 @@
+﻿@if (IsAccountUser)
+{
+    @ChildContent
+}
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Inject]
+    public SecurityService Security { get; set; }
+    public bool IsAccountUser { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var claims = await Security.GetUserClaims();
+        IsAccountUser = claims.CurrentRole == "Account User";
+    }
+}

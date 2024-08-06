@@ -1,0 +1,477 @@
+﻿@page "/file/upload"
+
+@using Customers.Infrastructure.Helper
+@inject NavigationManager NavManager
+@using Data.Models
+@attribute [StreamRendering]
+
+<style>
+    body {
+        counter-reset: process;
+    }
+
+    .file-loading-spinner {
+        position: absolute;
+        z-index: 10;
+        right: calc(50% - 20px);
+        top: 125px;
+    }
+
+    .process-list {
+        padding-left: 0 !important;
+    }
+
+        .process-list li {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin-bottom: 0.5rem !important;
+            margin: 0 auto;
+        }
+
+            .process-list li span::before {
+                counter-increment: process;
+                content: counter(process) ". ";
+            }
+
+    .process-progress {
+        height: 24px;
+        width: 24px;
+    }
+
+    #ddUpload .rz-fileupload-buttonbar .rz-fileupload-choose {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        padding: 100px 0;
+        border-radius: 0;
+    }
+
+        #ddUpload .rz-fileupload-buttonbar .rz-fileupload-choose:hover {
+            background-color: #fff;
+        }
+</style>
+
+<RadzenSteps @ref="steps" ShowStepsButtons="false" class="mt-3">
+    <Steps>
+        <RadzenStepsItem Text="Import" NextText="Process" PreviousText="">
+            <div class="container-fluid">
+                <div class="row px-3 py-3 mt-5">
+                    <div class="col-md-12 justify-content-center align-items-end flex-column d-flex position-relative">
+                        @if (isFileLoading)
+                        {
+                            <div class="spinner-border text-success file-loading-spinner" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        }
+                        <RadzenUpload Change="@(args=>OnChange(args))" id="ddUpload" @ref="uploadDD"
+                                      Accept="application/pdf,application/msword,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                                      ChooseText="Drag and drop here or click to choose file" Auto="false" Multiple="false"
+                                      InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "select file" }})" class="w-100 mb-2" />
+                        <RadzenAlert Shade="Radzen.Shade.Lighter" Variant="Radzen.Variant.Flat" Size="Radzen.AlertSize.Small" AlertStyle="Radzen.AlertStyle.Danger" Visible="@errorVisible">@error</RadzenAlert>
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-between">
+                        <RadzenButton Text="Cancel" ButtonType="ButtonType.Button" Click="CloseDialog" Variant="Variant.Outlined" ButtonStyle="ButtonStyle.Primary" />
+                        @if (!IsLoading)
+                        {
+                            <RadzenButton Text="Process" Click="Process" Disabled="isFileLoading" ButtonType="ButtonType.Submit" />
+                        }
+                        else
+                        {
+                            <RadzenButton ButtonType="ButtonType.Button" Style="min-width:106px;">
+                                <div class="spinner-border text-light" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </RadzenButton>
+                        }
+                    </div>
+                </div>
+            </div>
+        </RadzenStepsItem>
+        <RadzenStepsItem Text="Process" NextText="Finish">
+            <ol class="process-list mt-3" style="padding-left:0 !important;">
+                <li>
+                    <span>File to Import is Selected and Validated</span>
+                    @if (completedTasks <= 1)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+                <li>
+                    <span>Create Version File Name</span>
+                    @if (completedTasks <= 2)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+                <li>
+                    <span>Copy File to RFP Document Directory</span>
+                    @if (completedTasks <= 3)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+                <li>
+                    <span>Apply Optimization Functions</span>
+                    @if (completedTasks <= 4)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+                <li>
+                    <span>Prepare Document for Thematic Correlation Scoring</span>
+                    @if (completedTasks <= 5)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+                <li>
+                    <span>Prepare Document for Analysis and Graphing</span>
+                    @if (completedTasks <= 6)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+                <li>
+                    <span>Finalize Text Processing</span>
+                    @if (completedTasks <= 7)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+                <li>
+                    <span>Analyze Document Text</span>
+                    @if (completedTasks <= 8)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+                <li>
+                    <span>Update the Project Database</span>
+                    @if (completedTasks <= 9)
+                    {
+                        <RadzenProgressBarCircular Size="ProgressBarCircularSize.Small" class="process-progress" ProgressBarStyle="ProgressBarStyle.Success" Value="100" ShowValue="false" Mode="ProgressBarMode.Indeterminate" />
+                    }
+                    else
+                    {
+                        <RadzenIcon Icon="check_circle" IconColor="@Colors.Success" />
+                    }
+                </li>
+            </ol>
+            <div class="row">
+                <div class="col-md-10 offset-1">
+                    <RadzenAlert Shade="Radzen.Shade.Lighter" Variant="Radzen.Variant.Flat" Size="Radzen.AlertSize.Small" AlertStyle="Radzen.AlertStyle.Success" Visible="ImportSuccess">
+                        @(IsSOW? "SOW" : "Proposal") document imported successfully
+                    </RadzenAlert>
+                </div>
+                <div class="col-md-11 text-end">
+                    <RadzenButton Click="Finish" class="mt-3">Finish</RadzenButton>
+                </div>
+            </div>
+        </RadzenStepsItem>
+    </Steps>
+</RadzenSteps>
+
+@code {
+    [Inject]
+    public ICollectionSOWService SOWService { get; set; }
+    [Inject]
+    public ICollectionProposalService ProposalService { get; set; }
+    [Inject]
+    public SecurityService Security { get; set; }
+    [Inject]
+    public IKnownWordService KnownWordService { get; set; }
+    [Inject]
+    public DialogService DialogService { get; set; }
+    [Parameter]
+    public int CollectionId { get; set; }
+    [Parameter]
+    public bool IsSOW { get; set; }
+    bool errorVisible = false;
+    string error;
+    string DocumentName = string.Empty;
+    RadzenSteps steps;
+    RadzenUpload upload;
+    RadzenUpload uploadDD;
+    string ErrorText = "";
+    string ProcessText = "";
+    int completedTasks = 1;
+    bool ImportSuccess = false;
+    bool isFileLoading = false;
+
+    UploadDocumentModel CollectionDocument = new();
+    bool IsLoading = false;
+    int customParameter = 1;
+    string[] ValidFileList = { ".pdf", ".txt", ".docx", ".doc" };
+    [Inject]
+    public Customers.Admin.Services.ErrorDialogService ErrorDialogService { get; set; }
+
+    async Task OnChange(UploadChangeEventArgs args)
+    {
+        isFileLoading = true;
+        foreach (var file in args.Files)
+        {
+            Console.WriteLine($"File: {file.Name} / {file.Size} bytes");
+            if (file.Size > 10 * 1024 * 1024)
+            {
+                errorVisible = true;
+                error = "File exceeds 10MB limit. Please upload a file smaller than 10MB";
+                await uploadDD.ClearFiles();
+                return;
+            }
+
+            if (!ValidFileList.Contains(Path.GetExtension(file.Name).ToLower()))
+            {
+                errorVisible = true;
+                error = "Only PDF, Doc,Docx and TXT files are allowed.";
+                await uploadDD.ClearFiles();
+                return;
+            }
+            try
+            {
+                long maxFileSize = 10 * 1024 * 1024;
+                var stream = file.OpenReadStream(maxFileSize);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    var claims = await Security.GetUserClaims();
+                    await stream.CopyToAsync(ms);
+                    CollectionDocument = new UploadDocumentModel
+                    {
+                        FileName = file.Name,
+                        FileSize = file.Size,
+                        CreatedByUserId = claims.UserId,
+                        FileData = ms.ToArray(),
+                        CollectionId = CollectionId
+                    };
+
+                }
+                stream.Close();
+            }
+            catch (Exception ex)
+            {
+                await ErrorDialogService.ShowError(ex);
+                await uploadDD.ClearFiles();
+            }
+        }
+        isFileLoading = false;
+    }
+
+    void CloseDialog()
+    {
+        DialogService.Close();
+    }
+
+    async Task Process()
+    {
+        try
+        {
+            IsLoading = true;
+            await ProcessFile();            
+            if (IsSOW)
+            {
+                await SOWService.ImportSOW(CollectionDocument);
+            }
+            else
+            {
+                await ProposalService.ImportProposal(CollectionDocument);
+            }
+            completedTasks++;
+            ImportSuccess = true;
+            IsLoading = false;
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            await ErrorDialogService.ShowError(ex);
+            ImportSuccess = false;
+            IsLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    async Task ProcessFile()
+    {
+        try
+        {
+            await steps.NextStep();
+            StateHasChanged();
+
+            var fileType = CheckFileAndValidate();
+            if (string.IsNullOrEmpty(fileType))
+                return;
+
+            completedTasks++;
+            //Step = File to Import is Selected and Validated... Done
+
+            //Create Version File Name
+            //--------------------Pending--------------------
+            completedTasks++;
+            //Copy File to RFP Document Directory
+            //--------------------Pending--------------
+            completedTasks++;
+
+            CollectionDocument.TextFromImportFile = await FileHelper.GetAllTextFromImportFile(CollectionDocument.FileData, fileType);
+            int wordCount = DocumentClass.CountWordInTextString(CollectionDocument.TextFromImportFile);
+            //CollectionDocument.WordCount = wordCount;
+            int rawPageCount = (int)wordCount / 375;
+
+            rawPageCount = rawPageCount == 0 ? 1 : rawPageCount;
+
+            CollectionDocument.CleanedTextFromImportFile = FileHelper.CleanText(CollectionDocument.TextFromImportFile);
+            wordCount = DocumentClass.CountWordInTextString(CollectionDocument.CleanedTextFromImportFile);
+            int wordPageCount = (int)wordCount / 375;
+            //CollectionDocument.PageCount = wordPageCount;
+            var TotalWordPageCount = wordPageCount;
+            //Step = Apply Optimization Functions Done
+            completedTasks++;
+
+            var wordsList = new List<string>();
+            wordsList = FileHelper.SplitStringTextIntoWords(CollectionDocument.CleanedTextFromImportFile);
+            //Prepare Document for Thematic Correlation Scoring Done
+            completedTasks++;
+
+            var wordCountList = FileHelper.GenerateWordOccurenceList(wordsList);
+            wordCount = wordCountList.Count;
+
+            List<WordCountList> WordCountList2_NoDupes = FileHelper.RemoveDuplicateWordEntries_WordCountList(wordCountList);
+            wordCount = wordCountList.Count;
+
+            var WordCountList3_NoSingles = FileHelper.RemoveSingleCharacterWordEntries_WordCountList(WordCountList2_NoDupes);
+            wordCount = WordCountList3_NoSingles.Count;
+
+            //Optimization Functions Applied Done
+            completedTasks++;
+
+            var WordCountList4_KnownWordsRemoval = await SkipKnownWords_WordCountList(WordCountList3_NoSingles);
+            wordCount = WordCountList4_KnownWordsRemoval.Count;
+
+            //Skip for Now
+            //WordCountList5_RegisteredWordsRemoval = SkipRegisteredWords_WordCountList(WordCountList4_KnownWordsRemoval);
+            //Prepare Document for Analysis and Graphing Done
+
+            var WordCountList6_RemovePlurals = FileHelper.RemovePluralsAndEndings_WordCountList(WordCountList4_KnownWordsRemoval);
+            wordCount = WordCountList6_RemovePlurals.Count;
+            //Finalize Text Processing............................Done.
+            completedTasks++;
+
+            //Analyze Text
+            //Pending............
+            CollectionDocument.TextWordCountListString = FileHelper.ConvertWordCountListToString(WordCountList6_RemovePlurals);
+            completedTasks++;
+            // Reset the ActiveFlag for the existing documents, which right now Archives them.
+            //DocumentClass.ResetActiveFlag(originalImportFileNameOnlyWithoutExtension, docType.ToString());
+            StateHasChanged();
+            //values to store null;                                        // To Do:  documentBlob;
+            //values to store textFromImportFile;
+            //values to store cleanedTextFromImportFile;
+            //values to store textWordCountListString;
+
+            //values of counts PagesCount = CountPages;
+            //values of counts WordCount = CountWords;
+            //values of counts LineCount = CountLines;
+            //values of counts ParagraphCount = CountParagraphs;
+            //values of counts SpacesCount = CountSpaces;
+            //values of counts TabsCount = CountTabs;
+        }
+        catch (Exception ex)
+        {
+            await ErrorDialogService.ShowError(ex);
+        }
+    }
+
+    void Finish()
+    {
+        NavManager.NavigateTo($"collection/view/{CollectionId}");
+    }
+
+    string CheckFileAndValidate()
+    {
+        var extension = Path.GetExtension(CollectionDocument.FileName);
+        if (!(new string[] { ".pdf", ".docx", ".doc", ".txt" }).Contains(extension))
+        {
+            ErrorText += "<p>Please enter a valid file</p>";
+            return string.Empty;
+        }
+        else
+        {
+            ProcessText += "<p>1. File to Import is Selected and Validated...</p>";
+        }
+        return extension;
+    }
+
+    private async Task<List<WordCountList>> SkipKnownWords_WordCountList(List<WordCountList> inputList)
+    {
+        List<WordCountList> outputList = new List<WordCountList>();
+        // 2. Put the Known Words List into a List.
+        var knownWords = await KnownWordService.GetKnownWords();
+
+        List<string> knownWordsList = new List<string>();
+        knownWordsList = knownWords.Select(x => x.Word).ToList();
+        string knownWordString = string.Empty;
+
+
+        string currentWord = string.Empty;
+
+        try
+        {
+            foreach (WordCountList wcl in inputList)
+            {
+                foreach (string knownWord in knownWordsList)
+                {
+                    if (wcl.Word == knownWord)
+                    {
+                        wcl.WordCount = -1;
+                        break;      // Assumes no dupes here!
+                    }
+                }
+            }
+
+            // Now copy all but the Marked for Deletion items to the outputList!
+            foreach (WordCountList wcl in inputList)
+            {
+                if (wcl.WordCount != -1)
+                {
+                    outputList.Add(wcl);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+
+        return outputList;
+    }
+}

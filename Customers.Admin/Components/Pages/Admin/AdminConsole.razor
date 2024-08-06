@@ -1,0 +1,160 @@
+﻿@page "/monitoring-logs"
+@rendermode @(new InteractiveServerRenderMode(false))
+@layout MainLayout
+@inject IJSRuntime JSRuntime
+@using Radzen
+
+<RadzenColumn SizeSM="4" class="mb-2">
+    <RadzenText Text="Monitoring Logs" class="heading" TextStyle="TextStyle.H5" TagName="TagName.H1" style="margin: 0" />
+</RadzenColumn>
+<div class="rz-card rz-variant-filled rz-p-0 rz-material-3-demo-card">
+    <div class="rz-tabview rz-tabview-top example-tabs" tabindex="0">
+        <div class="rz-tabview-panels">
+            <div class="rz-tabview-panel" role="tabpanel" aria-hidden="false">
+
+                <RadzenStack>
+
+
+                    <div style="display: flex; gap: 10px;">
+                        <div style="width:20%">
+                            <RadzenColumn Style="flex: 1;">
+                                <RadzenDropDown @bind-Value="selectedPlatform" Data="@platforms" Placeholder="Select Platform" Style="width: 100%;" />
+                            </RadzenColumn>
+                        </div>
+                        <div style="width:20%">
+                            <RadzenColumn Style="flex: 1;">
+                                <RadzenDropDown @bind-Value="selectedActivity" Data="@activities" Placeholder="All" Style="width: 100%;" />
+                            </RadzenColumn>
+                        </div>
+                        <div style="width:20%">
+                            <RadzenColumn SizeSM="2">
+                                <RadzenDatePicker @bind-Value="fromDate" DateFormat="MM/dd/yyyy" Placeholder="From Date" Style="width: 100%;" />
+                            </RadzenColumn>
+                        </div>
+                        <div style="width:20%">
+                            <RadzenColumn SizeSM="2">
+                                <RadzenDatePicker @bind-Value="toDate" DateFormat="MM/dd/yyyy" Placeholder="To Date" Style="width: 100%;" />
+                            </RadzenColumn>
+                        </div>
+                        <div style="width:20%">
+                            <RadzenColumn Style="flex: 1;">
+                                <RadzenDropDown @bind-Value="selectedUser" Data="@users" Placeholder="Select Customer" Style="width: 100%;" />
+                            </RadzenColumn>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; justify-content:center; gap:5px">
+                        @if (isSearching)
+                        {
+                            <RadzenColumn SizeSM="12" class="rz-mt-3" style="text-align: center;">
+                                <RadzenButton Style="display: flex; align-items: center; justify-content: center; padding: 8px 16px;" Click="Search">
+                                    <span class="mdi mdi-magnify" style="margin-right: 3px; font-size: 16px;"></span>
+                                    <span>@searchButtonText</span>
+                                </RadzenButton>
+                            </RadzenColumn>
+
+                        }
+                        else
+                        {
+                            <RadzenColumn SizeSM="12" class="rz-mt-3" style="text-align: center;">
+                                <RadzenButton ButtonType="ButtonType.Button" Style="min-width:123px;padding:0;">
+                                    <div class="spinner-border text-light" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </RadzenButton>
+                            </RadzenColumn>
+                        }
+
+                        <RadzenColumn SizeSM="12" class="rz-mt-3" style="text-align: center;">
+                            <RadzenButton Style="display: flex; align-items: center; justify-content: center; padding: 8px 16px;">
+                                <span class="mdi mdi-microsoft-excel" style="margin-right: 8px; font-size: 16px;"></span>
+                                <span>Export</span>
+                            </RadzenButton>
+                        </RadzenColumn>
+                    </div>
+                </RadzenStack>
+
+                <RadzenDataGrid @ref="dataGrid" Data="@gridData" class="mt-4" TItem="LogEntry" AllowFiltering="true" AllowColumnResize="true" ColumnWidth="130px" AllowAlternatingRows="false" FilterMode="FilterMode.Advanced" AllowSorting="true" AllowPaging="true" PageSize="15">
+                    <Columns>
+                        <RadzenDataGridColumn TextAlign="TextAlign.Center" Width="80px" TItem="LogEntry" Property="EventTime" Title="Event Time" />
+                        <RadzenDataGridColumn TextAlign="TextAlign.Left" Width="70px" TItem="LogEntry" Property="Type" Title="Type" />
+                        <RadzenDataGridColumn TextAlign="TextAlign.Left" Width="200px" TItem="LogEntry" Property="Message" Title="Message" />
+                        <RadzenDataGridColumn TextAlign="TextAlign.Left" Width="70px" TItem="LogEntry" Property="User" Title="User" />
+                    </Columns>
+                </RadzenDataGrid>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string selectedPlatform;
+    private string selectedActivity;
+    private DateTime? fromDate;
+    private DateTime? toDate;
+    private string selectedUser;
+    private RadzenDataGrid<LogEntry> dataGrid;
+
+    private List<string> platforms = new List<string> { "RMO Admin", "RMO Web" };
+    private List<string> activities = new List<string> { "All", "Activities", "Errors" };
+    private List<string> users = new List<string> { "Romil", "Grant", "Nikhil", "Betile", "Yogesh" };
+
+
+
+    private List<LogEntry> gridData = new List<LogEntry>();
+    private string searchButtonText = "Search";
+    private bool isSearching = true;
+
+    private async Task Search()
+    {
+        isSearching = false;
+        searchButtonText = "Searching...";
+        await Task.Delay(1000); // Simulate search delay
+        gridData = new List<LogEntry>();
+        await dataGrid.Reload();
+        var messages = new List<string>
+{
+    "Attempted to login with valid credentials",
+    "Login OTP is verified",
+    "User logged out",
+    "Attempted to login with wrong password",
+    "An anonymous user attempted to login with email yogesh@xcodewebsolutions.co",
+    "OTP verification failed",
+    "Forgot Password is attempted, an OTP is sent to the email",
+    "User has set new password using Forgot Password",
+    "New collection is added. New collection Whitecaps_Broadsword is added",
+    "Collection  Whitecaps_Broadsword is modified",
+    "Collection  Whitecaps_Broadsword is archived",
+    "SOW 3 version 5 is imported to collection Analysis Match Chart",
+    "Collection Analysis Match Chart is modified",
+    "Proposal Whitecaps_Broadsword Proposal version 5 is imported to collection Analysis Match Chart",
+    "Analysis is generated with TC Score 37.17",
+    "Proposal Whitecaps_Broadsword Proposal version 7 - Copy version 3 is archived from collection Analysis Match Chart",
+    "User generated report for analysis Whitecaps_Broadsword Proposal version 5_V4.docx"
+};
+
+        for (int i = 1; i <= 60; i++)
+        {
+            gridData.Add(new LogEntry
+            {
+                EventTime = $"07/05/2024 0{i % 12 + 1}:00 PM",
+                Type = i % 2 == 0 ? "Error" : "Info",
+                Message = messages[i % messages.Count],
+                User = i % 2 == 0 ? "Romil" : "Grant"
+            });
+        }
+
+        searchButtonText = "Search";
+        isSearching = true;
+
+    }
+
+    public class LogEntry
+    {
+        public string EventTime { get; set; }
+        public string Type { get; set; }
+        public string Message { get; set; }
+        public string User { get; set; }
+    }
+}

@@ -1,0 +1,745 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Customers.Admin.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Customers.Admin.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_maps.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_maps.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_placeholders.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_variables-dark.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_variables-dark.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_color-bg.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_color-bg.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_focus-ring.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_focus-ring.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_icon-link.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_icon-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_stacks.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_stacks.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\helpers\\_vr.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\helpers\\_vr.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_banner.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_banner.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_color-mode.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_color-mode.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\bootstrap\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\bootstrap-icons.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-icons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\flag-icons.css",
+      "PackagePath": "staticwebassets\\css\\flag-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\css\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\css\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\materialdesignicons.css",
+      "PackagePath": "staticwebassets\\css\\materialdesignicons.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\materialdesignicons\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\css\\materialdesignicons\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\materialdesignicons\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\css\\materialdesignicons\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\materialdesignicons\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\css\\materialdesignicons\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\materialdesignicons\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\css\\materialdesignicons\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\css\\styels.css",
+      "PackagePath": "staticwebassets\\css\\styels.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\Create a very simple proof of conce.txt",
+      "PackagePath": "staticwebassets\\docs\\Create a very simple proof of conce.txt"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\FullReport1.pdf",
+      "PackagePath": "staticwebassets\\docs\\FullReport1.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\RM Desktop Daily Report Sample 1.docx",
+      "PackagePath": "staticwebassets\\docs\\RM Desktop Daily Report Sample 1.docx"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\Whitecaps SOW for Testing.pdf",
+      "PackagePath": "staticwebassets\\docs\\Whitecaps SOW for Testing.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\Whitecaps_Broadsword Proposal version 1.pdf_V2.pdf",
+      "PackagePath": "staticwebassets\\docs\\Whitecaps_Broadsword Proposal version 1.pdf_V2.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\dictionary.pdf",
+      "PackagePath": "staticwebassets\\docs\\dictionary.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\helloworld.pdf",
+      "PackagePath": "staticwebassets\\docs\\helloworld.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\index.pdf",
+      "PackagePath": "staticwebassets\\docs\\index.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\docs\\invoicesample.pdf",
+      "PackagePath": "staticwebassets\\docs\\invoicesample.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\Login_Image.jpg",
+      "PackagePath": "staticwebassets\\images\\Login_Image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\PDF_file_icon.svg.png",
+      "PackagePath": "staticwebassets\\images\\PDF_file_icon.svg.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\RM.png",
+      "PackagePath": "staticwebassets\\images\\RM.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\SweetSpot.png",
+      "PackagePath": "staticwebassets\\images\\SweetSpot.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\Xcode.png",
+      "PackagePath": "staticwebassets\\images\\Xcode.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\file-info-alt-1-svgrepo-com.svg",
+      "PackagePath": "staticwebassets\\images\\file-info-alt-1-svgrepo-com.svg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\login.jpg",
+      "PackagePath": "staticwebassets\\images\\login.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\logo-login.png",
+      "PackagePath": "staticwebassets\\images\\logo-login.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\text_file_icon.png",
+      "PackagePath": "staticwebassets\\images\\text_file_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\images\\word_file_icon.png",
+      "PackagePath": "staticwebassets\\images\\word_file_icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\js\\moment-timezone-with-data.min.js",
+      "PackagePath": "staticwebassets\\js\\moment-timezone-with-data.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\js\\pdf.min.js",
+      "PackagePath": "staticwebassets\\js\\pdf.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\js\\pdf.min.mjs",
+      "PackagePath": "staticwebassets\\js\\pdf.min.mjs"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\lib\\twitter-bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\twitter-bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\relevant-match\\Customers.Admin\\wwwroot\\lib\\twitter-bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\twitter-bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Customers.Admin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Customers.Admin.props",
+      "PackagePath": "build\\Customers.Admin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Customers.Admin.props",
+      "PackagePath": "buildMultiTargeting\\Customers.Admin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Customers.Admin.props",
+      "PackagePath": "buildTransitive\\Customers.Admin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

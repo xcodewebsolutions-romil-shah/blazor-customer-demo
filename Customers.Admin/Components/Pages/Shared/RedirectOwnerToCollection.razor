@@ -1,0 +1,13 @@
+﻿@inject NavigationManager NavManager
+@inject SecurityService Security
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        var claims = await Security.GetUserClaims();
+        if (claims.CurrentRole == "Account Owner")
+        {
+            NavManager.NavigateTo("collections");
+        };
+    }
+}

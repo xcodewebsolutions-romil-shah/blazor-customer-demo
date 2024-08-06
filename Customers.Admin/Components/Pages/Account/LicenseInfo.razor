@@ -1,0 +1,114 @@
+﻿@page "/license_details"
+@using Customers.Data.Contracts
+@using AutoMapper
+@using Customers.Infrastructure.Utils
+@inject SecurityService Security
+    @inject IUnitOfWork UnitOfWork
+    @inject IMapper mapper
+
+<div class="rz-card rz-variant-filled rz-p-0 rz-material-3-demo-card" id="Hsg49w66yE" _bl_183="">
+    <div class="rz-tabview rz-tabview-top example-tabs" id="UomLO2i3TU" tabindex="0" _bl_213="">
+        <div class="rz-tabview-panels">
+            <div class="rz-tabview-panel" role="tabpanel" id="UomLO2i3TU-tabpanel-0" aria-hidden="false" aria-labelledby="UomLO2i3TU-tabpanel-0-label">
+                <RadzenStack>
+                    <RadzenRow AlignItems="AlignItems.Center">
+                        <RadzenColumn SizeSM="12">
+                            <RadzenText Text="License Details" class="heading" TextStyle="TextStyle.H5" TagName="TagName.H1" style="margin: 0" />
+                        </RadzenColumn>
+                        <RadzenColumn SizeSM="12">
+                            <RadzenRow>
+                                <RadzenColumn SizeSM="4">
+                                    <RadzenText TextStyle="TextStyle.Body2" class="text-lightgrey">License Name</RadzenText>
+                                    @if (LicenseDefinitionDto != null)
+                                    {
+                                        <RadzenText TextStyle="TextStyle.H6">
+                                            @LicenseDefinitionDto.LicenseName
+                                        </RadzenText>
+                                    }
+                                    else
+                                    {
+                                        <div style="min-height:30px;">
+                                            <div class="label-line mb-0"></div>
+                                        </div>
+                                    }
+                                </RadzenColumn>
+                                <RadzenColumn SizeSM="4">
+                                    <RadzenText TextStyle="TextStyle.Body2" class="text-lightgrey">Start Date</RadzenText>
+                                    @if (CustomerLicense != null)
+                                    {
+                                        <RadzenText TextStyle="TextStyle.H6">
+                                            @DateUtils.FormatDate(CustomerLicense.StartDate)
+                                        </RadzenText>
+                                    }
+                                    else
+                                    {
+                                        <div style="min-height:30px;">
+                                            <div class="label-line mb-0"></div>
+                                        </div>
+                                    }
+                                </RadzenColumn>
+                                <RadzenColumn SizeSM="4">
+                                    <RadzenText TextStyle="TextStyle.Body2" class="text-lightgrey">End Date</RadzenText>
+                                    @if (CustomerLicense != null)
+                                    {
+                                        <RadzenText TextStyle="TextStyle.H6">
+                                            @DateUtils.FormatDate(CustomerLicense.StartDate)
+                                        </RadzenText>
+                                    }
+                                    else
+                                    {
+                                        <div style="min-height:30px;">
+                                            <div class="label-line mb-0"></div>
+                                        </div>
+                                    }
+                                </RadzenColumn>
+                                <RadzenColumn SizeSM="4">
+                                    <RadzenText TextStyle="TextStyle.Body2" class="text-lightgrey">Collections Allowed</RadzenText>
+                                    @if (CustomerLicense != null)
+                                    {
+                                        <RadzenText TextStyle="TextStyle.H6">
+                                            @CustomerLicense.CollectionsAllowed
+                                        </RadzenText>
+                                    }
+                                    else
+                                    {
+                                        <div style="min-height:30px;">
+                                            <div class="label-line mb-0"></div>
+                                        </div>
+                                    }
+                                </RadzenColumn>
+                                <RadzenColumn SizeSM="4">
+                                    <RadzenText TextStyle="TextStyle.Body2" class="text-lightgrey">Users per Collection Allowed</RadzenText>
+                                    @if (CustomerLicense != null)
+                                    {
+                                        <RadzenText TextStyle="TextStyle.H6">
+                                            @CustomerLicense.UsersPerCollectionAllowed
+                                        </RadzenText>
+                                    }
+                                    else
+                                    {
+                                        <div style="min-height:30px;">
+                                            <div class="label-line mb-0"></div>
+                                        </div>
+                                    }
+                                </RadzenColumn>
+                            </RadzenRow>
+                        </RadzenColumn>
+                    </RadzenRow>
+                </RadzenStack>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    public LicenseDefinitionDto LicenseDefinitionDto { get; set; }
+    public CustomerLicenseDto CustomerLicense { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var user = await Security.GetUserClaims();
+        CustomerLicense = mapper.Map<CustomerLicenseDto>(await UnitOfWork.CustomerLicenseRepository.QueryFirstOrDefaultAsync(x=>x.CustomerId == user.CustomerId));
+        LicenseDefinitionDto = mapper.Map<LicenseDefinitionDto>(await UnitOfWork.LicenseRepositary.QueryFirstOrDefaultAsync(x=>x.LicenseId == CustomerLicense.LicenseDefinitionId));
+    }
+}

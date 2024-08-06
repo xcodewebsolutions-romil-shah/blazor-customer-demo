@@ -1,0 +1,33 @@
+﻿<RadzenRow class="mt-3">
+    <RadzenColumn SizeMD="12" class="justify-content-between d-flex">
+        @if (Steps.SelectedIndex != 0)
+        {
+            <RadzenButton Variant="Variant.Outlined" Click="PrevStep" Text="Previous" />
+        }
+        else
+        {
+            <RadzenButton Variant="Variant.Outlined" Style="visibility:hidden;" Text="Previous" />
+        }
+        @if (!IsLastStep)
+        {
+            <RadzenButton Click="NextStep" Text="Next" />
+        }
+    </RadzenColumn>
+</RadzenRow>
+
+@code {
+    [Parameter]
+    public RadzenSteps Steps { get; set; }
+    [Parameter]
+    public bool IsLastStep { get; set; } = false;
+
+    void NextStep()
+    {
+        Steps.NextStep();
+    }
+
+    void PrevStep()
+    {
+        Steps.PrevStep();
+    }
+}

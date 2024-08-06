@@ -1,0 +1,47 @@
+﻿@layout LoginLayout
+@page "/verify-otp"
+@using System.Text.RegularExpressions;
+
+@*@attribute [StreamRendering]
+    @rendermode @(new InteractiveServerRenderMode(false))*@
+<PageTitle>OTP</PageTitle>
+<style>
+    .rz-textbox {
+        width: 100%;
+    }
+
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    .rz-button-sm {
+        display: none;
+    }
+</style>
+
+<RadzenAlert class="mt-3 mb-3" Shade="Radzen.Shade.Lighter" Variant="Radzen.Variant.Flat" Size="Radzen.AlertSize.Small" AlertStyle="Radzen.AlertStyle.Success" Visible=@SuccessVisible>An sms is sent to your registered mobile with one-time pin</RadzenAlert>
+<RadzenRow>
+    <RadzenColumn SizeMD="12">
+        @*<RadzenTemplateForm Action="@($"verify-otp?redirectUrl={redirectUrl}")" Data="@("login")"
+        Method="post">*@
+        <EditForm Model="OTPModel" OnSubmit="@SubmitOTP" FormName="otpForm">
+        <p class="mt-1 mb-2">
+            @OTP
+        </p>
+        <RadzenColumn class="mb-3">
+            <InputText type="number" @bind-Value="OTPModel.OTP" class="rz-textbox rz-state-empty" placeholder="Enter OTP" autocomplete="off" oninput="maxLengthCheck(this)"/>
+        </RadzenColumn>
+        <RadzenAlert class="mt-1 mb-3" Shade="Radzen.Shade.Lighter" Variant="Radzen.Variant.Flat" Size="Radzen.AlertSize.Small" AlertStyle="Radzen.AlertStyle.Danger" Visible="@errorVisible">@error</RadzenAlert>
+        <RadzenColumn class="mt-1 mb-2" Style=" display: flex; justify-content: center;  ">
+            <RadzenButton Variant="Variant.Flat" ButtonType="ButtonType.Submit" Text="Verify" ButtonStyle="ButtonStyle.Primary" class="w-100" />
+        </RadzenColumn>
+        </EditForm>
+    </RadzenColumn>
+</RadzenRow>
+
+
+

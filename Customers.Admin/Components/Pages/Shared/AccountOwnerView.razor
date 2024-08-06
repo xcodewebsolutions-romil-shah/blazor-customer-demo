@@ -1,0 +1,23 @@
+﻿
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        @if (IsAccountOwner)
+        {
+            @ChildContent
+        }
+    </AuthorizeView>
+</CascadingAuthenticationState>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Inject]
+    public SecurityService Security { get; set; }
+    public bool IsAccountOwner { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var claims = await Security.GetUserClaims();
+        IsAccountOwner = claims.CurrentRole == "Account Owner";
+    }
+}

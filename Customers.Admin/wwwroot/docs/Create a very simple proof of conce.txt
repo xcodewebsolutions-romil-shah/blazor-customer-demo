@@ -1,0 +1,11 @@
+Create a very simple proof of concept with Blazor Web App (Server) and Asp.net Core Web App (Razor Pages)
+The concept to be build is as follows:
+- Create new Solution with Blazor Web App (“Main App”) and Asp.net Core Web App (“Helper App”). Use Net8.
+- The Main App website has a single page with a button that opens Helper App website in a new tab or window. Here you need to pass some Base64 encoded string information to Helper App, e.g. in the URL.
+- The information you passed from Main App website to Helper App website is then used to load a byte[] from a very small example SQLite database that will be provided.
+- This byte[] is an Excel workbook that is to be loaded on Helper App website (which is also a single razor page) in a DevExpress Spreadsheet control.
+- On the same site where you added the Spreadsheet control, add a button that if clicked saves the workbook in the spreadsheet control to a byte[] and saves it in the SQLite database. This button must also close the site.
+- The code to load and save a byte[] in the control can be found here: https://demos.devexpress.com/ASPNetCore/Demo/Spreadsheet/FromBytes/
+- Info how to configure Helper App is here: https://docs.devexpress.com/AspNetCore/400374/spreadsheet/configure-a-visual-studio-project
+- Additional information how add the spreadsheet control is here: https://docs.devexpress.com/AspNetCore/401861/spreadsheet/add-control-to-a-project
+To summarize: I click a button in Main App that opens Helper App and loads the correct byte[] from the database into the spreadsheet control. The information to load the correct byte[] from a sample database is transmitted from Main App to Helper App. In Helper App I can manually change some of the workbook cells in the control, click the save button and the workbook is saved back to the database

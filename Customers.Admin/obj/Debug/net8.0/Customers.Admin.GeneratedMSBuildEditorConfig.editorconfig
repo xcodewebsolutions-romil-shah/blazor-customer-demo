@@ -1,0 +1,151 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Customers.Admin
+build_property.RootNamespace = Customers.Admin
+build_property.ProjectDir = D:\samples\Customers\Customers.Admin\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\samples\Customers\Customers.Admin
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/samples/Customers/Customers.Admin/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Layout/LoginLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTG9naW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Layout/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/AddApplicationRole.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XEFkZEFwcGxpY2F0aW9uUm9sZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/AddApplicationUser.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XEFkZEFwcGxpY2F0aW9uVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/ApplicationRoles.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XEFwcGxpY2F0aW9uUm9sZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/ApplicationUsers.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XEFwcGxpY2F0aW9uVXNlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/ChangePassword.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XENoYW5nZVBhc3N3b3JkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/EditApplicationUser.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XEVkaXRBcHBsaWNhdGlvblVzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/ForgotPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XEZvcmdvdFBhc3N3b3JkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/LicenseInfo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XExpY2Vuc2VJbmZvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XExvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/OTPInput.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XE9UUElucHV0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Account/SecurityCode.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2NvdW50XFNlY3VyaXR5Q29kZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Admin/AdminConsole.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZG1pblxBZG1pbkNvbnNvbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xJbmRleC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Shared/AccountOwnerView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaGFyZWRcQWNjb3VudE93bmVyVmlldy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Shared/AccountUserView.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaGFyZWRcQWNjb3VudFVzZXJWaWV3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Shared/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaGFyZWRcRXJyb3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Shared/FileUpload.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaGFyZWRcRmlsZVVwbG9hZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Shared/LoadingProgress.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaGFyZWRcTG9hZGluZ1Byb2dyZXNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Shared/RedirectOwnerToCollection.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaGFyZWRcUmVkaXJlY3RPd25lclRvQ29sbGVjdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Shared/SpinnerButton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaGFyZWRcU3Bpbm5lckJ1dHRvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Shared/StepsButtons.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTaGFyZWRcU3RlcHNCdXR0b25zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVkaXJlY3RUb0xvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/samples/Customers/Customers.Admin/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-ae85pf1wiy
+
+[D:/samples/Customers/Customers.Admin/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-oehud6v4uv

@@ -1,0 +1,16 @@
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\bin\Debug\net8.0\Customers.Infrastructure.deps.json
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\bin\Debug\net8.0\Customers.Infrastructure.dll
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\bin\Debug\net8.0\Customers.Infrastructure.pdb
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\bin\Debug\net8.0\Customers.Data.dll
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\bin\Debug\net8.0\TCS.dll
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\bin\Debug\net8.0\Customers.Data.pdb
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\Customers.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\Customers.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\Customers.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\Customers.Infrastructure.AssemblyInfo.cs
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\Customers.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\Customer.A95C0A9A.Up2Date
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\Customers.Infrastructure.dll
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\refint\Customers.Infrastructure.dll
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\Customers.Infrastructure.pdb
+C:\Users\Admin\Downloads\relevant-match\Customers.Infrastructure\obj\Debug\net8.0\ref\Customers.Infrastructure.dll

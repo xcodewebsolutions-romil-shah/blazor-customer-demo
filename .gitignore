@@ -1,0 +1,20 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/RelevantMatch.Data/bin/Debug/net8.0
+/RelevantMatch.Data/obj
+/RelevantMatch.Infrastructure/bin/Debug/net8.0
+/RelevantMatch.Infrastructure/obj
+/RelevantMatch.Services/bin/Debug/net8.0
+/RelevantMatch.Services/obj
+/RelevantMatch.User/bin/Debug/net8.0
+/RelevantMatch.User/obj
+/RelevantMatch.Infrastructure/bin/Release/net8.0
+/RelevantMatch.Data/bin/Release/net8.0
+/RelevantMatch.Services/bin/Release/net8.0
+/RelevantMatch.User/bin/Release/net8.0
+/RelevantMatch.User/Properties/PublishProfiles
+/RelevantMatch.Admin/obj
+/RelevantMatch.Admin/bin/Debug/net8.0

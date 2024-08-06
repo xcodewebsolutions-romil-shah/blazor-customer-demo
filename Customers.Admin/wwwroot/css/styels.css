@@ -1,0 +1,125 @@
+﻿*:not(span,i,button) {
+    color: #544f5a !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 17px !important;
+}
+
+.heading {
+    font-weight: 500;
+}
+
+.text-lightgrey {
+    color: #8a8d93 !important;
+}
+
+td, td span {
+    color: #89868d !important;
+}
+
+.rz-progressbar-value.rz-progressbar-value-animate, .rz-progressbar-label, .rz-progressbar.rz-progressbar-determinate.rz-progressbar-primary {
+    border-radius: 10px;
+}
+
+.rz-progressbar.days-progress {
+    height: 10px;
+    margin-top: 0.25rem;
+}
+
+/*.rz-card, .rz-data-grid {*/
+.rz-card {
+    box-shadow: 0 0.375rem 1rem 0 rgba(58, 53, 65, 0.12) !important;
+    border-radius: 4px;
+    border: 0 !important;
+}
+
+.rz-steps-number {
+    font-weight: 500;
+}
+
+.rz-steps-title {
+    font-weight: 500;
+    color: rgb(138, 141, 147);
+}
+
+.tooltip-text {
+    color: #fff !important;
+}
+
+    .tooltip-text strong {
+        color: #fff !important;
+    }
+
+.rz-fileupload-choose input[type=file] {
+    left: 0;
+}
+
+.rz-messages-error {
+    color: var(--rz-form-error-color) !important;
+}
+
+.rz-progressbar-circular-sm {
+    height: 1.5rem !important;
+}
+
+.rz-sidebar-expanded .logo-image {
+    width: 120px;
+    height: 120px;
+}
+
+.rz-sidebar-collapsed .logo-image {
+    width: 55px;
+    height: 55px;
+    margin-left: 5px;
+    margin-bottom: 27px;
+    margin-right: 3px;
+    margin-top: -18px;
+}
+
+.rz-sidebar-collapsed .rz-navigation-item-text, .rz-sidebar-collapsed h6.rz-text-subtitle1 {
+    display: none !important;
+}
+
+.password-group {
+    position: relative;
+}
+
+    .password-group i {
+        position: absolute;
+        right: 10px;
+        top: 18px;
+        color: var(--rz-success);
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+.spinner-border.text-light {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+}
+
+th span.rz-column-title-content {
+    color: #616161 !important;
+}
+
+th span.rz-column-title-content, td span.rz-cell-data, td span.rz-cell-data p {
+    font-size: 0.975rem !important;
+}
+
+@media (max-width: 768px) {
+    .rz-header, .rz-footer, .rz-body {
+        width: auto;
+    }
+
+    .rz-dialog:not(.rz-dialog-confirm):not(.rz-dialog-alert) {
+        position: absolute;
+        width: 90% !important;
+        top: 20px !important;        
+    }
+}

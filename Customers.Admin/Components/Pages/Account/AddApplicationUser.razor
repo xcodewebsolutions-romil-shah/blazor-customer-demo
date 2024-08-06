@@ -1,0 +1,73 @@
+@page "/add-application-user"
+@attribute [Authorize]
+@rendermode @(new InteractiveServerRenderMode(false))
+@attribute [StreamRendering]
+
+<RadzenRow>
+    <RadzenColumn SizeMD="12">
+        <RadzenTemplateForm TItem="Customers.Data.Models.AddUserModel" Data="@user" Visible="@(user != null)"
+                            Submit="@FormSubmit">
+            <RadzenAlert Title="Cannot create user" Shade="Shade.Lighter" Variant="Variant.Flat" Size="AlertSize.Small"
+                         AlertStyle="AlertStyle.Danger" Visible="@errorVisible">@error</RadzenAlert>
+                        <RadzenRow style="margin-bottom: 1rem">
+                            <RadzenColumn SizeMD="3">
+                                <RadzenLabel Component="FirstName" Text="First Name" /> <span class="text-danger">*</span>
+                            </RadzenColumn>
+                            <RadzenColumn SizeMD="9">
+                                <RadzenTextBox style="display: block; width: 100%" MaxLength="150" @bind-Value="@(user.FirstName)" Name="FirstName" />
+                                <RadzenRequiredValidator Component="FirstName" Text="This field is required" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow style="margin-bottom: 1rem">
+                            <RadzenColumn SizeMD="3">
+                                <RadzenLabel Component="LastName" Text="Last Name" /> <span class="text-danger">*</span>
+                            </RadzenColumn>
+                            <RadzenColumn SizeMD="9">
+                                <RadzenTextBox style="display: block; width: 100%" MaxLength="150" @bind-Value="@(user.LastName)" Name="LastName" />
+                                <RadzenRequiredValidator Component="LastName" Text="This field is required" />
+                            </RadzenColumn>
+                        </RadzenRow>
+                        <RadzenRow style="margin-bottom: 1rem">
+                            <RadzenColumn SizeMD="3">
+                                <RadzenLabel Component="Email" Text="Email" /> <span class="text-danger">*</span>
+                            </RadzenColumn>
+                            <RadzenColumn SizeMD="9">
+                                <RadzenTextBox style="display: block; width: 100%" MaxLength="150" @bind-Value="@(user.Email)" Name="Email" />
+                                <RadzenRequiredValidator Component="Email" Text="This field is required" />
+                                <RadzenEmailValidator Component="Email" Text="Enter a valid email address" />
+                                <RadzenCustomValidator Component="Email" Validator="@(()=>ValidateEmail(user.Email))" Text="User with same email already exists"></RadzenCustomValidator>
+                                <RadzenCustomValidator Component="Email" Validator="@(()=>ValidateDomain(user.Email))" Text="@DomainErrorMessage"></RadzenCustomValidator>
+                            </RadzenColumn>
+                        </RadzenRow>
+                        @if (ApplicationOwners.Count < 2)
+                        {
+                            <RadzenRow style="margin-bottom: 1rem">
+                                <RadzenColumn SizeMD="3">
+                                    @*<RadzenLabel Component="Email" style="width: 100%" Text="Email" />*@
+                                </RadzenColumn>
+                                <RadzenColumn SizeMD="9">
+                                    <RadzenCheckBox @bind-Value=@user.IsOwner Name="IsOwner" />
+                                    <RadzenLabel Text="Secondary Owner" Component="IsOwner" Style="margin-left:8px;vertical-align: middle;" />
+                                </RadzenColumn>
+                            </RadzenRow>
+                        }
+                        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center"
+                                     JustifyContent="JustifyContent.End" Gap="0.5rem">
+                            @if (isLoading)
+                            {
+                                <RadzenButton ButtonType="ButtonType.Button" Style="min-width:96px;padding:0;">
+                                    <div class="spinner-border text-light" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </RadzenButton>
+                            }
+                            else
+                            {
+                                <RadzenButton ButtonType="ButtonType.Submit" Icon="save" Text="Save" Variant="Variant.Flat" />
+                            }
+                            <RadzenButton ButtonStyle="ButtonStyle.Light" Text="Cancel" Click="@CancelClick"
+                                          Variant="Variant.Flat" />
+                        </RadzenStack>
+                    </RadzenTemplateForm>
+                </RadzenColumn>
+            </RadzenRow>
