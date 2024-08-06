@@ -1,4 +1,4 @@
-# Blazor Server Web Application Sample
+# Blazor Server Web Application Demo
 
 Welcome to the Blazor Server Web Application Sample project! This repository features a demo application built with Blazor Server and the Radzen library, following best practices for modern web development. This sample application demonstrates how to create a scalable, maintainable, and high-performance web application using these technologies.
 
